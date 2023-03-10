@@ -4,7 +4,27 @@ Some [pre-commit/pre-commit-hooks](https://github.com/pre-commit/pre-commit-hook
 
 ## Make
 
-For `make`.
+For `make -B`.
+
+## Shell
+
+```yaml
+- id: sh
+  entry: scripts/update-XXX.pl
+  args:
+    - XXX
+```
+
+Then every time `git commit`, `scripts/update-XXX.pl XXX` will be called to
+update `XXX`.
+
+This is an example `scripts/update-XXX.pl`, which function is replace all tab of
+`XXX` to 4 spaces.
+
+```perl
+#!/usr/bin/env -S perl -pi
+s/\t/    /g;
+```
 
 ## Update `CITATION.cff`
 

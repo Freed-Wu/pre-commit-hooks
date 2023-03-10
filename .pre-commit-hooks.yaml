@@ -10,6 +10,15 @@
   always_run: true
   pass_filenames: false
 
+- id: sh
+  name: sh
+  description: >
+    execute any shell code
+  language: system
+  entry: sh
+  always_run: true
+  pass_filenames: false
+
 - id: update-pyproject.toml
   name: update pyproject.toml
   description: >
